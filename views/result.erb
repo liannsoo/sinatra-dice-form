@@ -1,0 +1,11 @@
+<h1><%= rolls.size %>d<%= sides %></h1>
+<div>
+  <a href="/process_roll?dice=<%= rolls.size %>&sides=<%= sides %>">Roll again</a> |
+  <a href="/">Go back home</a>
+</div>
+
+<ol>
+  <% rolls.each_with_index do |roll, index| %>
+    <li><em>Result:</em><strong><%= roll %></strong></li>
+  <% end %>
+</ol>
